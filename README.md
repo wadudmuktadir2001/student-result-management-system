@@ -1,62 +1,167 @@
 # 🎓 Student Result Management System
 
-A web-based **Student Result Management System** built with **HTML, CSS, PHP, and MySQL**.  
-The system provides separate role-based workspaces for **Admin, Teacher, Student, and Parent** to manage and access academic information efficiently.
+A clean, role-based **Student Result Management System** developed with
+**PHP, MySQL, HTML, and CSS**. It provides dedicated workspaces for
+**Admin, Teacher, Student, and Parent** users to manage and access
+academic information through a single web application.
 
-## ✨ Features
+The system covers core academic workflows including users, students,
+courses, semesters, teacher assignments, enrollments, results,
+attendance, result audit history, and parent notifications.
+
+------------------------------------------------------------------------
+
+## 📸 Project Screenshots
+
+### Login Page
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/d81219ce-3bb4-4e92-bbd6-84cafe0136c6" />
+
+
+### Admin Dashboard
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/1df032de-0547-423d-bd5a-211812c8fc93" />
+
+
+### Teacher Dashboard
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/c5ddcf00-ec59-4044-b386-03d2fc03af34" />
+
+
+### Student Dashboard
+
+
+<img width="1365" height="766" alt="Screenshot 2026-10-15 233300" src="https://github.com/user-attachments/assets/1489fb36-e23e-4e23-8dc2-55385c0b414f" />
+
+
+
+### Parent Dashboard
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/8469de24-d08b-40db-8300-d7f5e8d84e56" />
+
+
+------------------------------------------------------------------------
+
+## ✨ Core Features
 
 ### 👨‍💼 Admin
-- Manage users
-- Manage courses and semesters
-- Assign teachers to courses
-- Manage student enrollments
-- Link parents with students
-- Manage academic results
-- Monitor attendance
-- View change history / audit records
+
+-   Dedicated admin access
+-   Manage academic and user-related data
+-   Manage courses and semesters
+-   Manage teacher-course-semester assignments
+-   Manage student enrollments
+-   Manage results
+-   Manage attendance
+-   Review result audit/change history
+-   Support parent-student relationships
 
 ### 👨‍🏫 Teacher
-- Access teacher dashboard
-- Manage student grades
-- Record attendance
-- View class reports
+
+-   Dedicated teacher dashboard
+-   Manage student grades/results
+-   Manage attendance
+-   Access academic reports
+-   Work with assigned courses and semesters
 
 ### 👨‍🎓 Student
-- Access student dashboard
-- View academic results
-- View result history
-- View report card
-- Manage profile
+
+-   Dedicated student dashboard
+-   View academic results
+-   Access report information
+-   PDF report-card download
+-   View academic progress through available result data
 
 ### 👨‍👩‍👧 Parent
-- Access parent dashboard
-- View child's result history
-- View report card
-- Receive notifications
-- Manage profile
 
-## 🛠️ Technologies Used
+-   Dedicated parent dashboard
+-   Access linked student's academic information
+-   View report/result information
+-   Receive academic notifications stored by the system
+-   PDF report-card download
 
-- HTML
-- CSS
-- PHP
-- MySQL
-- PDO
-- XAMPP
+------------------------------------------------------------------------
+
+## 🛠️ Tech Stack
+
+  Technology       Purpose
+  ---------------- -------------------------------
+  HTML             Page structure
+  CSS              User interface and styling
+  PHP              Server-side application logic
+  MySQL            Relational database
+  PDO              Secure database communication
+  Apache / XAMPP   Local development environment
+
+------------------------------------------------------------------------
 
 ## 🔐 Security Features
 
-- Role-based access control
-- CSRF protection
-- PHP sessions
-- HTTP-only session cookies
-- Prepared SQL statements using PDO
-- Output escaping
-- Secure password handling
+The application includes several security-focused implementations:
+
+-   Role-based authorization
+-   Session-based authentication
+-   Password hashing and verification
+-   PDO prepared statements
+-   CSRF protection
+-   HTML output escaping
+-   HTTP-only session cookies
+-   Session ID regeneration after login
+-   Login attempt throttling
+-   POST-only logout flow
+
+------------------------------------------------------------------------
+
+## 👥 User Roles
+
+  Role          Main Access
+  ------------- ---------------------------------------------------------
+  **Admin**     Academic administration and system management
+  **Teacher**   Grades, attendance, assigned academic work and reports
+  **Student**   Personal academic results and reports
+  **Parent**    Linked student's academic information and notifications
+
+After authentication, users are directed to role-specific areas of the
+application.
+
+------------------------------------------------------------------------
+
+## 🗄️ Database Structure
+
+The project uses the `student_results` MySQL database.
+
+Main tables:
+
+``` text
+users
+students
+courses
+semesters
+assignments
+enrollments
+results
+attendance
+audit_logs
+notifications
+```
+
+### Main Relationships
+
+-   A user has one of four roles: Admin, Teacher, Student, or Parent.
+-   Student records are connected to user accounts.
+-   A student can optionally be linked to a parent account.
+-   Teachers can be assigned to a course for a specific semester.
+-   Students enroll in courses by semester.
+-   Results belong to enrolled students, courses, and semesters.
+-   Attendance is recorded by student, course, semester, and date.
+-   Result changes can be recorded in audit logs.
+-   Parent accounts can receive notifications.
+
+------------------------------------------------------------------------
 
 ## 📁 Project Structure
 
-```text
+``` text
 student-result-management-system/
 │
 ├── admin/
@@ -66,6 +171,12 @@ student-result-management-system/
 ├── parent/
 ├── student/
 ├── teacher/
+├── screenshots/
+│   ├── login-page.png
+│   ├── admin-dashboard.png
+│   ├── teacher-dashboard.png
+│   ├── student-dashboard.png
+│   └── parent-dashboard.png
 │
 ├── admin.php
 ├── audit.php
@@ -81,74 +192,56 @@ student-result-management-system/
 └── README.md
 ```
 
-## ⚙️ Installation
+------------------------------------------------------------------------
 
-### 1. Clone the repository
+## ⚙️ Installation & Setup
 
-```bash
+### 1. Clone the Repository
+
+``` bash
 git clone https://github.com/wadudmuktadir2001/student-result-management-system.git
 ```
 
-### 2. Move the project
+### 2. Open the Project
 
-Place the project inside your XAMPP `htdocs` directory.
+Move or clone the project inside the XAMPP `htdocs` directory.
 
 Example:
 
-```text
+``` text
 C:\xampp\htdocs\student-result-management-system
 ```
 
 ### 3. Start XAMPP
 
-Start:
+Open **XAMPP Control Panel** and start:
 
-- Apache
-- MySQL
-
-### 4. Create the database
-
-Open phpMyAdmin and create a database named:
-
-```text
-student_results
+``` text
+Apache
+MySQL
 ```
 
-### 5. Import the database
+### 4. Set Up the Database
 
-Import the included:
+Open **phpMyAdmin** and import:
 
-```text
+``` text
 database.sql
 ```
 
-file into the `student_results` database.
+The SQL script creates the database:
 
-### 6. Run the application
-
-Open the project through your local Apache server.
-
-Example:
-
-```text
-localhost/student-result-management-system
+``` text
+student_results
 ```
 
-## 🗄️ Database Configuration
+and defines the required tables and relationships.
 
-Default local development configuration:
+### 5. Database Configuration
 
-```text
-Host: 127.0.0.1
-Port: 3306
-Database: student_results
-User: root
-Password: empty
-```
+The application supports the following environment variables:
 
-Database settings can also be configured using environment variables:
-
-```text
+``` text
 DB_HOST
 DB_PORT
 DB_NAME
@@ -156,53 +249,99 @@ DB_USER
 DB_PASS
 ```
 
-## 👥 User Roles
+For local development, make sure the database configuration matches your
+XAMPP/MySQL environment.
 
-| Role | Main Responsibility |
-|---|---|
-| Admin | Manages the complete academic system |
-| Teacher | Manages grades, attendance, and reports |
-| Student | Views results, history, and report cards |
-| Parent | Monitors linked student's academic progress |
+### 6. Run the Application
 
-## 📸 Screenshots
+Open your browser and visit:
 
-### Login Page
+``` text
+http://localhost/student-result-management-system/
+```
 
-<img width="1357" height="767" alt="LoginPage" src="https://github.com/user-attachments/assets/5818fbac-7fc9-4ce2-9902-74a5201d08b4" />
+------------------------------------------------------------------------
 
+## 🌱 Demo Data
 
-### Admin Dashboard
+A `seed.php` script is included for generating sample users and academic
+data for development/testing.
 
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/be6fdf4e-1115-47ac-8cfa-7fe1f09fd4f8" />
+Run it from the terminal:
 
+``` bash
+php seed.php
+```
 
+The seed script is restricted to CLI execution and skips seeding if the
+database already contains users.
 
-### Teacher Dashboard
+> Demo data is intended for local development/testing only. Do not use
+> demo credentials in production.
 
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/403e3caa-fbbb-4659-bf99-cc1b9c3a1414" />
+------------------------------------------------------------------------
 
+## 🔑 Authentication Flow
 
+``` text
+Login
+  ↓
+Validate Request & Credentials
+  ↓
+Create Authenticated Session
+  ↓
+Identify User Role
+  ↓
+Redirect to Role Dashboard
+  ↓
+Admin / Teacher / Student / Parent Workspace
+```
 
-### Student Dashboard
+The application verifies protected access through authentication and
+role checks.
 
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/cbfef824-53e4-4f60-ad8b-90bcb19944ec" />
+------------------------------------------------------------------------
 
+## 📊 Academic Workflow
 
+``` text
+Admin creates/manages academic data
+              ↓
+Teacher assigned to Course + Semester
+              ↓
+Student enrolled in Course + Semester
+              ↓
+Teacher manages Result / Attendance
+              ↓
+Result data stored and changes can be audited
+              ↓
+Student accesses academic information
+              ↓
+Linked Parent can access relevant information/notifications
+```
 
-### Parent Dashboard
-
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/bffa2187-1da8-488d-91a7-470bee1f3b91" />
-
+------------------------------------------------------------------------
 
 ## 🚀 Future Improvements
 
-- Email notifications
-- Advanced analytics dashboard
-- Improved responsive design
-- Result publication workflow
-- Additional reporting features
+Potential improvements for future versions:
+
+-   Password reset workflow
+-   Email notification support
+-   Advanced academic analytics
+-   Dashboard charts and visualization
+-   Automated testing
+-   Production deployment configuration
 
 
+------------------------------------------------------------------------
 
-Developed as a Web Programming project using HTML, CSS, PHP, and MySQL.
+Web Programming Project
+
+Built with **PHP • MySQL • HTML • CSS**
+
+------------------------------------------------------------------------
+
+## 📄 License
+
+This project was developed for educational and portfolio purposes.
