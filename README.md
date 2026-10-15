@@ -342,6 +342,9 @@ Built with **PHP • MySQL • HTML • CSS**
 
 ------------------------------------------------------------------------
 
-## 📄 License
 
-This project was developed for educational and portfolio purposes.
+## 📄 Project Purpose
+
+This project was developed as part of the **Web Programming Course** to apply practical knowledge of web application development using **HTML, CSS, PHP, and MySQL**.
+
+It demonstrates role-based access, database management, authentication, academic result processing, attendance management, and other core web programming concepts through a practical **Student Result Management System**.
