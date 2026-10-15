@@ -203,8 +203,6 @@ DB_PASS
 - Result publication workflow
 - Additional reporting features
 
-## 👨‍💻 Author
 
-**Wadud Muktadir**
 
 Developed as a Web Programming project using HTML, CSS, PHP, and MySQL.
