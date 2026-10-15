@@ -174,28 +174,31 @@ DB_PASS
 
 ### Admin Dashboard
 
-<img width="1365" height="721" alt="image" src="https://github.com/user-attachments/assets/37dbb65f-5261-4c44-a2fb-010159b7c02a" />
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/be6fdf4e-1115-47ac-8cfa-7fe1f09fd4f8" />
+
 
 
 ### Teacher Dashboard
 
-<img width="1365" height="719" alt="image" src="https://github.com/user-attachments/assets/d6ce1bd8-dfdf-418c-9a79-f44ac30471be" />
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/403e3caa-fbbb-4659-bf99-cc1b9c3a1414" />
+
 
 
 ### Student Dashboard
 
-<img width="1364" height="720" alt="image" src="https://github.com/user-attachments/assets/c25c5962-f2c7-40f4-a361-f4d1ea14a23d" />
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/cbfef824-53e4-4f60-ad8b-90bcb19944ec" />
+
 
 
 ### Parent Dashboard
-<img width="1365" height="712" alt="image" src="https://github.com/user-attachments/assets/1aeb2914-d94c-4064-93ae-318c1ef49ca2" />
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/bffa2187-1da8-488d-91a7-470bee1f3b91" />
 
 
 ## 🚀 Future Improvements
 
 - Email notifications
 - Advanced analytics dashboard
-- PDF result generation
 - Improved responsive design
 - Result publication workflow
 - Additional reporting features
